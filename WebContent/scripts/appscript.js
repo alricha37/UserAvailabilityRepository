@@ -10,11 +10,11 @@ $(function(){
 	$('#chg-balloon-input').keyup(function()
 	{
 		var yourInput = $(this).val();
-		re = /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi;
+		re = /[\s`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi;
 		var isSplChar = re.test(yourInput);
 		if(isSplChar)
 		{
-			var no_spl_char = yourInput.replace(/[`~!@#$%^&*()_|+\-=?;:'".<>\{\}\[\]\\\/]/gi, '');
+			var no_spl_char = yourInput.replace(/[\s`~!@#$%^&*()_|+\-=?;:'".<>\{\}\[\]\\\/]/gi, '');
 			$(this).val(no_spl_char);
 		}
 	});
